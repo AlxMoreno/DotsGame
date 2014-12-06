@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res) {
-  res.render('juego', { title: 'Express' });
+  res.render('juego', { title: 'Jueguito' });
 });
 
 module.exports = router;
