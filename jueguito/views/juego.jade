@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='initial-scale=1,maximum-scale=1,user-scalable=no')
+    title cir.culOS
+    link(type='text/css', rel='stylesheet', href='/css/juego.css') 
+    script(src='http://code.jquery.com/jquery-1.10.1.min.js')
+    script(src='/javascripts/g.js')
+        
+    title cir.culOS
+  body
+  #menu.hidden
+    h1 cir.culOS
+    p.b(onclick='newGame()') ¡Jugar!
+    p.b(onclick='showHelp()') ¿Cómo le hago?
+    p#m_hs.p
+  #help.hidden(onclick='hideHelp()')
+    h1 Circles
+    p
+      Cada nivel se añade un nuevo círculo, toca ese círculo para pasar de nivel, si tocas uno incorrecto el juego termina.
+    p.p Toca para continuar
+  #score.hidden(onclick='nextLevel()')
+    h1#curscore
+    p#s_hs
+    p.p Toca para continuar
+  #lose.hidden
+    h1 Perdiste
+    p Puntuación:
+    h1#lose_score
+    p.p.u(onclick='newGame()') Nuevo Juego
+    div(onclick='toMenu()') Menú
+  //
+    <div id="update" class="hidden">
+        <h1>Update Available</h1>
+        <p class="p u"onclick="cancelUpdate()">install later</p>
+        <div onclick="doUpdate()">install now</div>
+      </div>
+  #game
+
+    
